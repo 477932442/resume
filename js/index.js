@@ -19,4 +19,62 @@ $(function(){
 
 //$(".backtop") 返回按钮父容器
 		$(".backtop").backTop();
+
+// 三角向下滚动
+		$(".sanjiao").click(function () {
+        	$({dNum:0}).animate({dNum:500},{
+	            duration:700,
+	            step: function () {
+	                $(window).scrollTop(this.dNum);
+	            }
+            })
+        });
+        // 导航
+            $("nav .nav li:eq(0)").click(function () {
+        		$({num:$(window).scrollTop()}).animate({num:0},{ 
+            		duration:1000,
+            		step: function () {
+                		$(window).scrollTop(this.num);
+		            }
+		        })
+		    });
+
+		   	 $("nav .nav li:eq(1)").click(function () {
+		        $({num:$(window).scrollTop()}).animate({num:752},{ 
+		            duration:1000,
+		            step: function () {
+		                $(window).scrollTop(this.num);
+		            }
+		        })
+		    });
+
+		    $("nav .nav li:eq(2)").click(function () {
+		        $({num:$(window).scrollTop()}).animate({num:1350},{ 
+		            duration:1000,
+		            step: function () {
+		                $(window).scrollTop(this.num);
+		            }
+		        })
+		    });
+
+		    $("nav .nav li:eq(3)").click(function () {
+		        $({num:$(window).scrollTop()}).animate({num:2077},{ 
+		            duration:1000,
+		            step: function () {
+		                $(window).scrollTop(this.num);
+		            }
+		        })
+		    });
+
+		    $("nav .nav li:eq(4)").click(function () {
+		        $({num:$(window).scrollTop()}).animate({num:3600},{ 
+		            duration:1000,
+		            step: function () {
+		                $(window).scrollTop(this.num);
+		            }
+		        })
+		    });
+
+    
 })
+
